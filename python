@@ -1,0 +1,20 @@
+def main():
+    liczba_ocen = int(input("Podaj liczbę ocen: "))
+    oceny = []
+    suma = 0
+
+    for i in range(liczba_ocen):
+        ocena = int(input(f"Podaj ocenę {i + 1}: "))
+        oceny.append(ocena)
+        suma += ocena
+
+    srednia = suma / liczba_ocen
+    print(f"Średnia ocen: {srednia:.2f}")
+
+    if srednia >= 3.0:
+        print("Uczeń zaliczył przedmiot.")
+    else:
+        print("Uczeń nie zaliczył przedmiotu.")
+
+if __name__ == "__main__":
+    main()
