@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Podaj liczbę ocen: ");
+        int liczbaOcen = int.Parse(Console.ReadLine());
+        int[] oceny = new int[liczbaOcen];
+        int suma = 0;
+
+        for (int i = 0; i < liczbaOcen; i++)
+        {
+            Console.Write($"Podaj ocenę {i + 1}: ");
+            oceny[i] = int.Parse(Console.ReadLine());
+            suma += oceny[i];
+        }
+
+        double srednia = (double)suma / liczbaOcen;
+        Console.WriteLine($"Średnia ocen: {srednia:F2}");
+
+        if (srednia >= 3.0)
+        {
+            Console.WriteLine("Uczeń zaliczył przedmiot.");
+        }
+        else
+        {
+            Console.WriteLine("Uczeń nie zaliczył przedmiotu.");
+        }
+    }
+}
